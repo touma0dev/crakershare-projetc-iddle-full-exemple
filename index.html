@@ -467,10 +467,24 @@
       
     </div>
     <script>
-    const gearIcon = document.querySelector(".gear-icon");
-    gearIcon.addEventListener("click", function () {
-      this.classList.toggle("active");
-    });
+  const gearIcon = document.querySelector(".gear-icon");
+const toggle = document.querySelector(".sandwich-toggle");
+
+let timeout;
+
+gearIcon.addEventListener("click", function () {
+  clearTimeout(timeout);
+  this.classList.toggle("active");
+  toggle.classList.toggle("active");
+});
+
+toggle.addEventListener("mouseleave", function () {
+  timeout = setTimeout(() => {
+    this.classList.remove("active");
+    gearIcon.classList.remove("active");
+  }, 2000);
+});
+
     </script>
   </body>
 </html>
