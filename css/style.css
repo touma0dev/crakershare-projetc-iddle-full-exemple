@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap");
+:root {
+  --black: #000000;
+  --border: black;
+  --back-ground: #8444d6;
+  --color: #f5f5f5;
+  --color-hover: #c6b9d8;
+  --logo: #ffa0a0;
+}
+
+a,
+li,
+p {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+* {
+  font-family: "Sono", sans-serif;
+  font-size: 14pt;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  min-width: 450px;
+  background-color: var(--back-ground);
+  border: 1.5px solid var(--black);
+  padding: 6px 6px;
+  border-radius: 10px;
+  margin: 30pt;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+}
+.navbar-logo a {
+  padding: 5px 0px;
+  display: inline-block;
+  font-size: 16.6pt;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0.1px var(--color);
+  -webkit-text-fill-color: transparent;
+}
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.navbar-menu li a {
+  -webkit-text-stroke: 1px var(--color);
+  text-stroke: 1px var(--black);
+  padding: 0px 14px;
+}
+.navbar-menu li a:hover {
+  -webkit-text-stroke: 1px var(--color-hover);
+}
+.navbar-dropdown:hover .navbar-lista-dropdown {
+  display: block;
+  transform: rotateX(0deg);
+  transform-origin: top center;
+  animation: rotateX 0.4s ease-in-out forwards;
+}
+.navbar-lista {
+  position: relative;
+  z-index: 1;
+}
+.navbar-lista a {
+  border-left: 2px solid var(--logo);
+}
+.navbar-lista a:hover {
+  -webkit-text-stroke: 1px var(--color-hover);
+}
+.navbar-lista-dropdown {
+  display: none;
+  transform-origin: top center;
+  top: 15%;
+  transition: transform 0.3s ease;
+  background-color: var(--back-ground);
+  border-radius: 5px;
+  border-bottom: var(--logo) 2px solid;
+  position: absolute;
+  max-width: 200px;
+  transform: rotateX(-90deg);
+}
+@keyframes rotateX {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+.navbar-lista-dropdown li {
+  border-left: var(--logo) 2px solid;
+  padding: 5px 0px;
+}
+.navbar-lista-dropdown li a {
+  font-size: 17px;
+}
+.navbar-lista-dropdown li a:hover {
+  -webkit-text-stroke: 1px var(--color-hover);
+}
+
+/* Mobile and desktop browsers */
+@media (max-width: 414px) {
+  .navbar {
+    min-width: 30px;
+  }
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .navbar-menu li {
+    display: none;
+  }
+}
+@media (max-width: 18000px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+@media (max-width: 661px) {
+  .navbar {
+    min-width: 30px;
+  }
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .navbar-menu li {
+    display: none;
+  }
+  .navbar .sandwich {
+    display: block;
+  }
+}
+@media (max-width: 18000px) {
+  .kit-show li {
+    display: none;
+  }
+}
+@media (max-width: 791px) {
+  .hidden {
+    display: none;
+  }
+  .kit-show li {
+    display: block;
+  }
+}
+.home {
+  right: 0;
+  left: -6px;
+}
+
+.lis-icon {
+  right: 0;
+  top: -2px;
+  left: -15px;
+}
+
+.sobre {
+  right: -5px;
+  top: -4px;
+}
+
+.star-about {
+  left: -10px;
+  right: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.rotate {
+  transition: transform 1s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.rotate.active {
+  transform: rotate(50deg);
+}
+
+.sandwich {
+  margin: 3px 3px;
+  display: none;
+}
+.gear-icon.active + .sandwich-toggle {
+  display: block;
+}
+.sandwich-toggle {
+  background-color: var(--back-ground);
+  animation: growDown 600ms ease-in-out forwards;
+  transform-origin: top center;
+  display: none;
+  border: 1px dashed var(--black);
+  text-align: left;
+  top: 41px;
+  left: -36px;
+  width: 200%;
+  border-radius: 5px;
+}
+.sandwich-toggle li {
+  padding: 6px 6px;
+  border: 1px solid var(--color-hover);
+  text-align: center;
+  border-radius: 5px;
+}
+.sandwich-toggle li a {
+  -webkit-text-stroke: 1px var(--color);
+  text-stroke: 1px var(--black);
+}
+.sandwich-toggle li a:hover {
+  -webkit-text-stroke: 1px var(--color-hover);
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
