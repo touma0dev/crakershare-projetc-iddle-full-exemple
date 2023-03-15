@@ -16,6 +16,7 @@ p {
 }
 
 * {
+  background-color: var(--color-hover);
   font-family: "Sono", sans-serif;
   font-size: 14pt;
   margin: 0;
@@ -35,7 +36,11 @@ p {
   align-content: center;
   justify-content: space-around;
 }
+.navbar-logo {
+  background-color: var(--back-ground);
+}
 .navbar-logo a {
+  background-color: var(--back-ground);
   padding: 5px 0px;
   display: inline-block;
   font-size: 16.6pt;
@@ -44,11 +49,13 @@ p {
   -webkit-text-fill-color: transparent;
 }
 .navbar-menu {
+  background-color: var(--back-ground);
   display: flex;
   align-items: center;
   align-content: center;
 }
 .navbar-menu li a {
+  background-color: var(--back-ground);
   -webkit-text-stroke: 1px var(--color);
   text-stroke: 1px var(--black);
   padding: 0px 14px;
@@ -195,6 +202,7 @@ p {
 }
 
 .sandwich {
+  background-color: var(--back-ground) !important;
   margin: 3px 3px;
   display: none;
 }
@@ -202,24 +210,25 @@ p {
   display: block;
 }
 .sandwich-toggle {
-  background-color: var(--back-ground);
+  background-color: var(--back-ground) !important;
   animation: growDown 600ms ease-in-out forwards;
   transform-origin: top center;
-  display: none;
-  border: 1px dashed var(--black);
   text-align: left;
   top: 41px;
   left: -36px;
   width: 200%;
   border-radius: 5px;
+  display: none;
 }
 .sandwich-toggle li {
+  border-radius: 5%;
   padding: 6px 6px;
-  border: 1px solid var(--color-hover);
+  border: 1px solid var(--black);
   text-align: center;
-  border-radius: 5px;
+  background-color: var(--back-ground) !important;
 }
 .sandwich-toggle li a {
+  background-color: var(--back-ground) !important;
   -webkit-text-stroke: 1px var(--color);
   text-stroke: 1px var(--black);
 }
@@ -237,4 +246,7 @@ p {
   100% {
     transform: scaleY(1);
   }
+}
+.background {
+  background-color: var(--back-ground);
 }/*# sourceMappingURL=style.css.map */
