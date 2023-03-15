@@ -105,10 +105,12 @@ p {
   }
 }
 .navbar-lista-dropdown li {
+  background-color: var(--back-ground);
   border-left: var(--logo) 2px solid;
   padding: 5px 0px;
 }
 .navbar-lista-dropdown li a {
+  background-color: var(--back-ground);
   font-size: 17px;
 }
 .navbar-lista-dropdown li a:hover {
